@@ -1,0 +1,29 @@
+<ion-view view-title="Add Expense">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <label color="primary">Amount</label>
+        <input type="text" placeholder="Amount" ng-model="vm.expenseToAdd.amount">
+      </ion-item>
+      <ion-item>
+        <label color="primary">Description</label>
+        <input type="text" placeholder="Description" ng-model="vm.expenseToAdd.description">
+      </ion-item>
+      <ion-item>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Category
+          </div>
+          <select ng-model="vm.expenseToAdd.category">
+            <option ng-repeat="category in vm.categories">
+              {{category}}
+            </option>
+          </select>
+        </label>
+      </ion-item>
+    </ion-list>
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="vm.saveExpense()">Save Expense</button>
+    </div>
+  </ion-content>
+</ion-view>
