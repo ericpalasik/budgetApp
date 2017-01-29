@@ -1,10 +1,12 @@
 <ion-view view-title="Home">
   <ion-content>
-    <div ng-repeat="expense in vm.expenses()">
-      {{expense.description}} -
-      {{expense.amount}} -
-      {{expense.category}}
-    </div>
+    <ion-list>
+      <ion-item ng-repeat="expense in vm.getExpenses()">
+        <div color="primary">Description: {{expense.description}}</div>
+        <div color="primary">Amount: {{expense.amount}}</div>
+        <div color="primary">Category: {{expense.category}}</div>
+      </ion-item>
+    </ion-list>
   </ion-content>
   <div class="bar bar-footer bar-stable">
     <a href="#/add" class="button button-assertive icon-left ion-compose">New Expense</a>

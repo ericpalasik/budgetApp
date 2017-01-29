@@ -8,6 +8,6 @@
     function homeCtrl(Expenses) {
       var vm = this;
 
-      vm.expenses = Expenses.getExpenses;
+      vm.getExpenses = Expenses.getExpenses;
     }
 })();
