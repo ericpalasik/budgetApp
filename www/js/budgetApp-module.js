@@ -2,7 +2,8 @@
   angular.module('budgetApp', ['budgetApp.run',
                                'budgetApp.routes',
                                'budgetApp.categories',
-                               'budgetApp.add',
+                               'budgetApp.addExpense',
+                               'budgetApp.addCategory',
                                'budgetApp.expenses',
                                'budgetApp.home'
                                ]);

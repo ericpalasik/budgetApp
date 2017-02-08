@@ -7,8 +7,10 @@
         <div color="primary">Category: {{expense.category}}</div>
       </ion-item>
     </ion-list>
+    <span>Total Amount Spent: {{vm.getTotalExpenses()}}</span>
   </ion-content>
   <div class="bar bar-footer bar-stable">
-    <a href="#/add" class="button button-assertive icon-left ion-compose">New Expense</a>
+    <a href="#/addExpense" class="button button-assertive icon-left ion-compose">New Expense</a>
+    <a href="#/addCategory" class="button button-calm icon-right">New Category</a>
   </div>
 </ion-view>

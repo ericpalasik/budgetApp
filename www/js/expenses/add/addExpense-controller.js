@@ -1,16 +1,15 @@
 (function() {
   angular
-    .module('budgetApp.add')
-    .controller('AddCtrl', addCtrl);
+    .module('budgetApp.addExpense')
+    .controller('AddExpenseCtrl', addExpenseCtrl);
 
-    addCtrl.$inject = ['Categories', 'Expenses', '$state'];
+    addExpenseCtrl.$inject = ['Categories', 'Expenses', '$state'];
 
-    function addCtrl(Categories, Expenses, $state) {
+    function addExpenseCtrl(Categories, Expenses, $state) {
       var vm = this;
 
       vm.categories = Categories.getCategories();
       vm.saveExpense = saveExpense;
-
 
       vm.expenseToAdd = {
           description : '',

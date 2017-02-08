@@ -24,7 +24,8 @@
 
       var service = {
         getExpenses : getExpenses,
-        addExpense : addExpense
+        addExpense : addExpense,
+        getTotalExpenses : getTotalExpenses
       }
       return service;
 
@@ -36,6 +37,14 @@
 
       function addExpense(expense) {
         expenses.push(expense);
+      }
+
+      function getTotalExpenses() {
+        var total = 0;
+        angular.forEach(expenses, function(expense) {
+          total += parseInt(expense.amount);
+        });
+        return total;
       }
     }
 })();

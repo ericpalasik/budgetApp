@@ -11,12 +11,18 @@
          controller: 'HomeCtrl',
          controllerAs: 'vm'
     });
-     $stateProvider.state('add', {
-          url: '/add',
-          templateUrl: 'js/add/add.html',
-          controller: 'AddCtrl',
-          controllerAs: 'vm'
-        });
+    $stateProvider.state('addExpense', {
+         url: '/addExpense',
+         templateUrl: 'js/expenses/add/addExpense.html',
+         controller: 'AddExpenseCtrl',
+         controllerAs: 'vm'
+    });
+    $stateProvider.state('addCategory', {
+         url: '/addCategory',
+         templateUrl: 'js/categories/add/addCategory.html',
+         controller: 'AddCategoryCtrl',
+         controllerAs: 'vm'
+    });
 
     $urlRouterProvider.otherwise('/');
   }

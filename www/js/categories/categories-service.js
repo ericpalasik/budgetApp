@@ -14,7 +14,8 @@
           ]
 
       var service = {
-        getCategories : getCategories
+        getCategories : getCategories,
+        addCategory : addCategory
       }
       return service;
 
@@ -22,6 +23,10 @@
 
       function getCategories() {
         return categories;
+      }
+
+      function addCategory(category) {
+        categories.push(category);
       }
     }
 })();

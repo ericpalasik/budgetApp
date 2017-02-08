@@ -1,0 +1,18 @@
+<ion-view view-title="Add Category">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <label color="primary">Category</label>
+        <input type="text" placeholder="Category" ng-model="vm.categoryToAdd">
+      </ion-item>
+      <div class="padding">
+        <ion-item ng-repeat="category in vm.getCategories()">
+          {{category}}
+        </ion-item>
+      </div>
+    </ion-list>
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="vm.saveCategory()">Save Category</button>
+    </div>
+  </ion-content>
+</ion-view>

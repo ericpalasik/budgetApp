@@ -9,5 +9,6 @@
       var vm = this;
 
       vm.getExpenses = Expenses.getExpenses;
+      vm.getTotalExpenses = Expenses.getTotalExpenses;
     }
 })();
